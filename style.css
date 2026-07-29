@@ -926,3 +926,19 @@ section p{
 
 }
 
+
+/* MOBILE TAGLINE COMPACT VERSION */
+
+@media(max-width:768px){
+
+.tagline{
+
+    font-size:0.75rem;
+    letter-spacing:2px;
+    white-space:nowrap;
+    margin-top:15px;
+
+}
+
+}
+
