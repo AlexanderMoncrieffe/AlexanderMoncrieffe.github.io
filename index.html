@@ -14,13 +14,19 @@
 
 <body>
 
-<nav class="main-nav">
+<nav class="nav-wrapper">
 
-    <a href="#about">Artist</a>
-    <a href="#works">Works</a>
-    <a href="#shop">Shop</a>
-    <a href="#projects">Projects</a>
-    <a href="#contact">Contact</a>
+    <div class="main-nav">
+
+        <a href="#about">Artist</a>
+        <a href="#works">Works</a>
+        <a href="#shop">Shop</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+
+    </div>
+
+    <button class="menu-toggle">☰</button>
 
 </nav>
 
@@ -60,30 +66,19 @@
 
         <h2>Selected Works</h2>
 
-        <img
-            src="images/portfolio-banner.png"
-            class="portfolio-banner"
-            alt="Selected Works">
+        <div class="gallery">
 
-        <img
-            src="images/work-03.jpg"
-            class="portfolio-banner"
-            alt="Artwork 3">
+            <img src="images/portfolio-banner.png" class="artwork" alt="Selected Works">
 
-        <img
-            src="images/work-04.jpg"
-            class="portfolio-banner"
-            alt="Artwork 4">
+            <img src="images/work-03.jpg" class="artwork" alt="Artwork 3">
 
-        <img
-            src="images/work-05.jpg"
-            class="portfolio-banner"
-            alt="Artwork 5">
+            <img src="images/work-04.jpg" class="artwork" alt="Artwork 4">
 
-        <img
-            src="images/work-02.jfif"
-            class="portfolio-banner"
-            alt="Moncrieffe Artwork">
+            <img src="images/work-05.jpg" class="artwork" alt="Artwork 5">
+
+            <img src="images/work-02.jfif" class="artwork" alt="Moncrieffe Artwork">
+
+        </div>
 
     </section>
 
@@ -114,9 +109,73 @@
 </section>
 
 
+
+<div id="lightbox">
+<img id="lightbox-image">
+</div>
+
+<script>
+
+const images=document.querySelectorAll(".artwork");
+const box=document.getElementById("lightbox");
+const boxImage=document.getElementById("lightbox-image");
+
+images.forEach(img=>{
+    img.onclick=()=>{
+        boxImage.src=img.src;
+        box.style.display="flex";
+    }
+});
+
+box.onclick=()=>{
+    box.style.display="none";
+};
+
+
+const navWrapper=document.querySelector(".nav-wrapper");
+const menuToggle=document.querySelector(".menu-toggle");
+const navLinks=document.querySelectorAll(".main-nav a");
+
+
+menuToggle.onclick=()=>{
+
+    navWrapper.classList.toggle("open");
+
+};
+
+
+navLinks.forEach(link=>{
+
+    link.onclick=()=>{
+
+        navWrapper.classList.remove("open");
+
+    }
+
+});
+
+
+window.addEventListener("scroll",()=>{
+
+    navWrapper.classList.remove("open");
+
+});
+
+</script>
+
 </body>
 
+
 </html>
+
+
+
+
+
+
+
+
+
 
 
 
