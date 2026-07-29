@@ -1,0 +1,121 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Creative Practice | Moncrieffe</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+<nav class="nav-wrapper">
+
+    <div class="main-nav">
+
+        <a href="index.html#about">Artist</a>
+        <a href="index.html#works">Works</a>
+        <a href="creative-practice.html">Creative Practice</a>
+        <a href="index.html#contact">Contact</a>
+
+    </div>
+
+    <button class="menu-toggle">☰</button>
+
+</nav>
+
+
+
+<header class="practice-hero">
+
+    <img 
+    src="images/creative-practice-hero.png" 
+    alt="Creative Practice"
+    class="practice-image">
+
+</header>
+
+
+
+<section class="practice-content">
+
+    <h1>Creative Practice</h1>
+
+
+    <p>
+    Alongside his studio practice, Moncrieffe develops creative projects
+    that explore the relationship between art, education and community.
+    </p>
+
+
+    <p>
+    Through workshops, artist-led projects and creative learning experiences,
+    these practices extend painting beyond the studio and into shared spaces.
+    </p>
+
+
+</section>
+
+
+<section class="practice-gallery">
+
+    <img class="practice-artwork" src="images/practice-01.jpg" alt="Creative Practice Project">
+
+    <img class="practice-artwork" src="images/practice-02.jpg" alt="Creative Practice Project">
+
+    <img class="practice-artwork" src="images/practice-03.jpg" alt="Creative Practice Project">
+
+    <img class="practice-artwork" src="images/practice-exhibition.jpg" alt="Creative Practice Exhibition">
+
+    <img class="practice-artwork" src="images/practice-project.jpg" alt="Creative Practice Project">
+
+</section>
+
+<div id="lightbox">
+
+<img id="lightbox-image">
+
+</div>
+
+<script>
+
+const images = document.querySelectorAll(".practice-artwork");
+const box = document.getElementById("lightbox");
+const boxImage = document.getElementById("lightbox-image");
+
+images.forEach(img => {
+    img.addEventListener("click", () => {
+        boxImage.src = img.src;
+        box.style.display = "flex";
+    });
+});
+
+box.addEventListener("click", () => {
+    box.style.display = "none";
+});
+
+const navWrapper = document.querySelector(".nav-wrapper");
+const menuToggle = document.querySelector(".menu-toggle");
+
+menuToggle.addEventListener("click", () => {
+    navWrapper.classList.toggle("open");
+});
+
+</script>
+
+
+</body>
+
+</html>
+
+
+
+
+
