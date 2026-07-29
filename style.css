@@ -1175,8 +1175,8 @@ section p{
 }
 
 .artist-drawing{
-    width:350px;
-    max-width:40%;
+    width:220px;
+    max-width:35%;
     height:auto;
 }
 
@@ -1202,4 +1202,5 @@ section p{
 .artist-drawing{
     border-radius:12px;
 }
+
 
