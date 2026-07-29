@@ -648,3 +648,70 @@ html,body{
 
 
 
+
+/* MOBILE NAV WIDTH FIX */
+
+@media(max-width:768px){
+
+.nav-wrapper.open .main-nav{
+
+    max-width:calc(100vw - 30px);
+
+}
+
+
+.main-nav{
+
+    gap:12px;
+
+    padding:12px 18px;
+
+}
+
+
+.main-nav a{
+
+    font-size:.58rem;
+
+    letter-spacing:1px;
+
+    white-space:nowrap;
+
+}
+
+}
+
+
+/* ==============================
+   MOBILE NAV WIDTH CORRECTION
+   ============================== */
+
+@media(max-width:768px){
+
+.nav-wrapper.open .main-nav{
+
+    max-width:calc(100vw - 40px);
+    box-sizing:border-box;
+
+}
+
+
+.main-nav{
+
+    gap:10px;
+    padding:12px 16px;
+    box-sizing:border-box;
+
+}
+
+
+.main-nav a{
+
+    font-size:.55rem;
+    letter-spacing:1px;
+    white-space:nowrap;
+
+}
+
+}
+
