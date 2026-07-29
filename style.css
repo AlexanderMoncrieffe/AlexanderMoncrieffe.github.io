@@ -859,3 +859,70 @@ h2{
 
 }
 
+
+/* ==============================
+   MOBILE SECTION RESET
+   ============================== */
+
+@media(max-width:768px){
+
+section{
+
+    min-height:auto;
+
+    width:100%;
+
+    padding:60px 20px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:flex-start;
+
+    align-items:stretch;
+
+}
+
+
+section h2{
+
+    font-size:2rem;
+
+    text-align:center;
+
+    letter-spacing:3px;
+
+}
+
+
+section p{
+
+    width:100%;
+
+    max-width:none;
+
+    font-size:1.05rem;
+
+    line-height:1.7;
+
+    text-align:left;
+
+}
+
+
+.gallery{
+
+    width:100%;
+
+}
+
+
+.artwork{
+
+    max-width:100%;
+
+}
+
+}
+
