@@ -766,3 +766,96 @@ html,body{
 
 }
 
+
+/* ==============================
+   MOBILE CONTENT ALIGNMENT FIX
+   ============================== */
+
+@media(max-width:768px){
+
+section{
+
+    width:100%;
+    max-width:100%;
+    box-sizing:border-box;
+
+    padding-left:20px;
+    padding-right:20px;
+
+    overflow:hidden;
+
+}
+
+
+p{
+
+    width:100%;
+    max-width:100%;
+
+    text-align:left;
+
+    line-height:1.7;
+
+}
+
+
+h2{
+
+    text-align:center;
+
+}
+
+
+/* artist text */
+
+#about p{
+
+    max-width:100%;
+
+    margin-left:auto;
+    margin-right:auto;
+
+}
+
+
+/* gallery */
+
+.gallery{
+
+    width:100%;
+
+    grid-template-columns:1fr;
+
+    justify-items:center;
+
+}
+
+
+.artwork{
+
+    width:100%;
+
+    max-width:320px;
+
+    height:auto;
+
+    aspect-ratio:1 / 1;
+
+}
+
+
+/* prevent any section pushing sideways */
+
+#projects,
+#contact,
+#works{
+
+    overflow:hidden;
+
+    width:100%;
+
+}
+
+
+}
+
