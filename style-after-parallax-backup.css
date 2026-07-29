@@ -339,3 +339,25 @@ html,body{
 
 }
 
+
+/* CLEAN DESKTOP PARALLAX OVERRIDE */
+
+@media (min-width:769px){
+
+    .hero-image{
+        position:absolute;
+        left:50%;
+        top:0;
+
+        width:110%;
+        height:100%;
+
+        transform:translateX(-50%);
+        object-fit:cover;
+
+        will-change:transform;
+        transform-origin:center center;
+    }
+
+}
+
