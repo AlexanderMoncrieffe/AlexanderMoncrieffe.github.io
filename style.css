@@ -572,3 +572,79 @@ html,body{
 
 }
 
+
+/* ==============================
+   MOBILE NAVIGATION + GALLERY
+   ============================== */
+
+
+@media(max-width:768px){
+
+
+
+
+
+/* mobile keeps same glass pill style */
+
+.nav-wrapper{
+
+    right:15px;
+    top:20px;
+
+}
+
+
+.nav-wrapper.open .main-nav{
+
+    max-width:90vw;
+
+}
+
+
+.main-nav{
+
+    flex-direction:row;
+
+    align-items:center;
+
+    gap:18px;
+
+    padding:12px 20px;
+
+}
+
+
+.main-nav a{
+
+    font-size:.65rem;
+
+    letter-spacing:1px;
+
+}
+
+
+/* mobile gallery */
+
+.gallery{
+
+    grid-template-columns:1fr;
+
+    gap:25px;
+
+}
+
+
+.artwork{
+
+    width:90vw;
+
+    margin:auto;
+
+}
+
+
+}
+
+
+
+
