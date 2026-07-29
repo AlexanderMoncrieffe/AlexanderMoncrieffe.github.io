@@ -1,0 +1,4 @@
+*.bak
+index-backup-*.html
+index-before-*.html
+style-backup-*.css
