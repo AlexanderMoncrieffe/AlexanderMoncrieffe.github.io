@@ -1165,3 +1165,41 @@ section p{
 
 }
 
+
+/* ABOUT ARTIST LAYOUT */
+
+.about-layout{
+    display:flex;
+    align-items:center;
+    gap:60px;
+}
+
+.artist-drawing{
+    width:350px;
+    max-width:40%;
+    height:auto;
+}
+
+.about-layout p{
+    flex:1;
+}
+
+@media(max-width:768px){
+
+.about-layout{
+    flex-direction:column;
+}
+
+.artist-drawing{
+    max-width:80%;
+}
+
+}
+
+
+/* MATCH ARTWORK CORNERS */
+
+.artist-drawing{
+    border-radius:12px;
+}
+
