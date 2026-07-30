@@ -20,14 +20,24 @@
 
     <div class="main-nav">
 
-        <a href="index.html#about">Artist</a>
-        <a href="index.html#works">Works</a>
-        <a href="creative-practice.html">Creative Practice</a>
-        <a href="index.html#contact">Contact</a>
+        <a href="index.html#about" data-en="Artist" data-es="Artista">Artist</a>
+        <a href="index.html#works" data-en="Works" data-es="Obras">Works</a>
+        <a href="creative-practice.html" data-en="Creative Practice" data-es="Práctica Creativa">Creative Practice</a>
+        <a href="index.html#contact" data-en="Contact" data-es="Contacto">Contact</a>
 
     </div>
 
-    <button class="menu-toggle">☰</button>
+        <div class="nav-buttons">
+
+        <button class="menu-toggle">☰</button>
+
+        <div class="language-switch">
+            <button onclick="setLanguage('en')">EN</button>
+            <span>|</span>
+            <button onclick="setLanguage('es')">ES</button>
+        </div>
+
+    </div>
 
 </nav>
 
@@ -46,18 +56,18 @@
 
 <section class="practice-content">
 
-    <h1>Creative Practice</h1>
+    <h1 data-en="Creative Practice" data-es="Práctica Creativa">Creative Practice</h1>
 
 
     <p>
-    Alongside his studio practice, Moncrieffe develops creative projects
-    that explore the relationship between art, education and community.
+    <span data-en="Alongside his studio practice, Moncrieffe develops creative projects" data-es="Junto a su trabajo de estudio, Moncrieffe desarrolla proyectos creativos">Alongside his studio practice, Moncrieffe develops creative projects</span>
+    <span data-en="that explore the relationship between art, education and community." data-es="que exploran la relación entre el arte, la educación y la comunidad.">that explore the relationship between art, education and community.</span>
     </p>
 
 
     <p>
-    Through workshops, artist-led projects and creative learning experiences,
-    these practices extend painting beyond the studio and into shared spaces.
+    <span data-en="Through workshops, artist-led projects and creative learning experiences," data-es="A través de talleres, proyectos dirigidos por el artista y experiencias de aprendizaje creativo,">Through workshops, artist-led projects and creative learning experiences,</span>
+    <span data-en="these practices extend painting beyond the studio and into shared spaces." data-es="estas prácticas llevan la pintura más allá del estudio y hacia espacios compartidos.">these practices extend painting beyond the studio and into shared spaces.</span>
     </p>
 
 
@@ -115,9 +125,28 @@ menuToggle.addEventListener("click", () => {
 </script>
 
 
+<script>
+function setLanguage(language){
+
+    document.querySelectorAll("[data-en]").forEach(element => {
+
+        if(language === "es"){
+            element.textContent = element.dataset.es;
+        } else {
+            element.textContent = element.dataset.en;
+        }
+
+    });
+
+    document.documentElement.lang = language;
+}
+</script>
 </body>
 
 </html>
+
+
+
 
 
 
