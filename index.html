@@ -31,9 +31,9 @@
 <button class="menu-toggle">☰</button>
 
 <div class="language-switch">
-<button onclick="setLanguage("en")">EN</button>
+<button onclick="setLanguage('en')">EN</button>
 <span>|</span>
-<button onclick="setLanguage("es")">ES</button>
+<button onclick="setLanguage('es')">ES</button>
 </div>
 
 </div>
@@ -67,12 +67,8 @@
 
         <img src="images/artist.jpg" class="artist-drawing" alt="Drawing of Alexander Moncrieffe">
 
-        <p>
-            Alexander Moncrieffe is a contemporary artist whose practice centres on
-            figurative painting, colour, portraiture and creative exploration.
-            Alongside studio work he develops murals, exhibitions and educational
-            projects that encourage creativity within the community.
-        </p>
+        <p id="about-text">
+            Alexander Moncrieffe is an artist based in Andalucía whose practice is rooted in traditional painting techniques and an ongoing exploration of colour, form and visual expression. His work moves between intimate studio paintings and larger-scale painted projects, allowing the same interest in colour and paint to be explored in very different environments.</p>
 
     </div>
 
@@ -196,12 +192,32 @@ window.addEventListener("scroll",()=>{
 
 });
 
+
+function setLanguage(language){
+
+    const aboutText = document.getElementById("about-text");
+
+    if(language === "es"){
+
+        aboutText.textContent =
+        "Alexander Moncrieffe es un artista afincado en Andalucía cuya práctica se basa en técnicas tradicionales de pintura y en una exploración continua del color, la forma y la expresión visual. Su trabajo se mueve entre pinturas de estudio de carácter íntimo y proyectos pictóricos de mayor escala, permitiendo explorar el mismo interés por el color y la pintura en entornos muy diferentes.";
+
+    } else {
+
+        aboutText.textContent =
+        "Alexander Moncrieffe is an artist based in Andalucía whose practice is rooted in traditional painting techniques and an ongoing exploration of colour, form and visual expression. His work moves between intimate studio paintings and larger-scale painted projects, allowing the same interest in colour and paint to be explored in very different environments.";
+
+    }
+}
 </script>
 
 </body>
 
 
 </html>
+
+
+
 
 
 
