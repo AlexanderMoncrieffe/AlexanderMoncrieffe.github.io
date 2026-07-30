@@ -18,11 +18,11 @@
 
     <div class="main-nav">
 
-        <a href="#about">Artist</a>
-        <a href="#works">Works</a>
+        <a href="#about" data-en="Artist" data-es="Artista">Artist</a>
+        <a href="#works" data-en="Works" data-es="Obras">Works</a>
         <a href="#shop">Shop</a>
-        <a href="#practice">Creative Practice</a>
-        <a href="#contact">Contact</a>
+        <a href="#practice" data-en="Creative Practice" data-es="Práctica Creativa">Creative Practice</a>
+        <a href="#contact" data-en="Contact" data-es="Contacto">Contact</a>
 
     </div>
 
@@ -50,7 +50,7 @@
     <img src="images/logo.png" class="logo" alt="Moncrieffe Logo">
 
     <h1 class="tagline">
-        ARTIST &nbsp;&nbsp;•&nbsp;&nbsp; PAINTER &nbsp;&nbsp;•&nbsp;&nbsp; CREATIVE
+        <span data-en="ARTIST" data-es="ARTISTA">ARTIST</span> &nbsp;&nbsp;•&nbsp;&nbsp; <span data-en="PAINTER" data-es="PINTOR">PAINTER</span> &nbsp;&nbsp;•&nbsp;&nbsp; <span data-en="CREATIVE" data-es="CREATIVO">CREATIVE</span>
     </h1>
 
 </div>
@@ -76,7 +76,7 @@
 
     <section id="works">
 
-        <h2>Selected Works</h2>
+        <h2 data-en="Selected Works" data-es="Obras Seleccionadas">Selected Works</h2>
 
         <div class="gallery">
 
@@ -102,20 +102,20 @@
     </section>
     <section id="practice">
 
-        <h2>Creative Practice</h2>
+        <h2 data-en="Creative Practice" data-es="Práctica Creativa">Creative Practice</h2>
 
         <p>
-            Alongside his studio practice, Moncrieffe develops creative projects
+            <span data-en="Alongside his studio practice, Moncrieffe develops creative projects" data-es="Junto a su trabajo de estudio, Moncrieffe desarrolla proyectos creativos">Alongside his studio practice, Moncrieffe develops creative projects</span>
             connecting art, education and community.
         </p>
 
         <p>
-            Artist-in-residence programmes, workshops, murals and educational
-            projects form part of an expanded artistic practice.
+            <span data-en="Artist-in-residence programmes, workshops, murals and educational" data-es="Los programas de artista en residencia, los talleres, los murales y los proyectos educativos">Artist-in-residence programmes, workshops, murals and educational</span>
+            <span data-en="projects form part of an expanded artistic practice." data-es="forman parte de una práctica artística más amplia.">projects form part of an expanded artistic practice.</span>
         </p>
 
         <a href="creative-practice.html">
-            Explore Creative Practice →
+            <span data-en="Explore Creative Practice →" data-es="Explorar la Práctica Creativa →">Explore Creative Practice →</span>
         </a>
 
     </section>
@@ -126,7 +126,7 @@
 
     <section id="contact">
 
-        <h2>Contact</h2>
+        <h2 data-en="Contact" data-es="Contacto">Contact</h2>
 
         <p>
             Email:
@@ -195,26 +195,35 @@ window.addEventListener("scroll",()=>{
 
 function setLanguage(language){
 
+    document.querySelectorAll("[data-en]").forEach(element => {
+
+        if(language === "es"){
+            element.textContent = element.dataset.es;
+        } else {
+            element.textContent = element.dataset.en;
+        }
+
+    });
+
     const aboutText = document.getElementById("about-text");
 
     if(language === "es"){
-
-        aboutText.textContent =
-        "Alexander Moncrieffe es un artista afincado en Andalucía cuya práctica se basa en técnicas tradicionales de pintura y en una exploración continua del color, la forma y la expresión visual. Su trabajo se mueve entre pinturas de estudio de carácter íntimo y proyectos pictóricos de mayor escala, permitiendo explorar el mismo interés por el color y la pintura en entornos muy diferentes.";
-
+        aboutText.textContent = "Alexander Moncrieffe es un artista afincado en Andalucía cuya práctica se basa en técnicas tradicionales de pintura y en una exploración continua del color, la forma y la expresión visual. Su trabajo se mueve entre pinturas de estudio de carácter íntimo y proyectos pictóricos de mayor escala, permitiendo explorar el mismo interés por el color y la pintura en entornos muy diferentes.";
     } else {
-
-        aboutText.textContent =
-        "Alexander Moncrieffe is an artist based in Andalucía whose practice is rooted in traditional painting techniques and an ongoing exploration of colour, form and visual expression. His work moves between intimate studio paintings and larger-scale painted projects, allowing the same interest in colour and paint to be explored in very different environments.";
-
+        aboutText.textContent = "Alexander Moncrieffe is an artist based in Andalucía whose practice is rooted in traditional painting techniques and an ongoing exploration of colour, form and visual expression. His work moves between intimate studio paintings and larger-scale painted projects, allowing the same interest in colour and paint to be explored in very different environments.";
     }
+
+    document.documentElement.lang = language;
 }
+
 </script>
 
 </body>
 
 
 </html>
+
+
 
 
 
